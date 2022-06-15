@@ -1,0 +1,200 @@
+.section{
+
+}
+
+.section-head-text{
+  font-size: calc(24px + 1.5vw);
+  color: rgb(130, 232, 137);
+}
+
+.section-sub-head{
+  font-size: calc(12px + 1vw);
+  color: lightgrey;
+}
+
+.body-text{
+  font-size: calc(10px + .5vw);
+  color: white;
+}
+
+.subheader{
+  font-size: calc(12px + 1vw);
+  color: rgb(130, 232, 137);
+}
+
+/* Styling for home section */
+#home{
+  height: 1000px;
+  min-height: 500px;
+  max-height: 95vh;
+
+  /* Parallax Scrolling Background */
+  background-image: url("Blammus.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head-text{
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  white-space: nowrap;
+}
+
+#myName{
+  font-size: calc(20px + 3vw);
+}
+
+#quickDesc{
+  font-size: calc(10px + 1.5vw);
+}
+
+.head-icon{
+  height: calc(18px + 2.5vw);
+  width: calc(18px + 2.5vw);
+  fill: initial;
+  transition: fill 0.5s;
+}
+
+.head-icon:hover{
+  fill: #DA4567;
+}
+
+
+#about{
+  /* Styling for about section
+  height: 500px;
+  max-height: 60vh;
+  min-height: 450px;
+  */
+}
+
+
+#portrait{
+  max-width:150px;
+  width:100%;
+}
+
+.skill-label{
+  color:white;
+}
+
+#resume-button{
+  width: 300px;
+}
+
+/* Styling for work section */
+#work{
+  background-color: rgb(102, 102, 102);
+}
+
+  /*Timeline Styling*/
+.timeline{
+  margin: 0 auto;
+  max-width: 750px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 4px 1fr;
+  color: white;
+}
+
+.timeline-bar{
+  position: relative;
+  background: white;
+}
+
+.timeline-bar-top{
+    top: calc(50% - 7px); /*7px = 1/2 of the height of timeline-point*/
+}
+
+.timeline-bar-bottom{
+    bottom: calc(50% - 7px); /*7px = 1/2 of the height of timeline-point*/
+}
+
+.timeline-bar-filler{
+  height: 20px;
+}
+
+.timeline-point{
+  position:absolute;
+  top: calc(50% - 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 20%;
+}
+
+.timeline-point-first{
+  top: 0;
+}
+
+.timeline-point-last{
+  top: initial;
+  bottom: 0;
+}
+
+.timeline-element{
+  margin: 0 20px 0 20px;
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: box-shadow .25s;
+  border-radius: 10px;
+  line-height: 1.75em
+}
+
+.timeline-element:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+.timeline-title{
+  margin: 0;
+  font-size: calc(12px + 1vw);
+  font-weight: bold;
+}
+
+.timeline-date{
+  margin: 0 0 0 10px;
+  font-size: calc(8px + 1vw);
+  font-style: italic;
+}
+
+.timeline-content{
+  margin: 0;
+  font-size: calc(10px + 1vw);
+}
+
+
+/* Styling for contact section */
+#contact{
+  height: 600px;
+  min-height: 400px;
+  max-height: 50vh;
+}
+
+.contact-icon{
+  height: calc(45px + 1vw);
+  width: calc(45px + 1vw);
+  fill: rgb(130, 232, 137); /*Change Color?*/
+}
+
+.contact-info{
+  font-size: calc(12px + 1vw);
+  color: white;
+}
+
+.contact-details{
+  font-size: calc(8px + .75vw);
+  color: lightgrey;
+}
+
+#footer{
+  height: 100px;
+}
+
+a{
+  text-decoration: underline solid transparent;
+}
