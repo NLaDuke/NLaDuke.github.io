@@ -54,7 +54,7 @@
   height: calc(18px + 2.5vw);
   width: calc(18px + 2.5vw);
   fill: initial;
-  transition: fill 0.5s;
+  transition: fill 0.5s ease-out;
 }
 
 .head-icon:hover{
@@ -141,30 +141,55 @@
   padding: 1.5em;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  transition: box-shadow .25s;
   border-radius: 10px;
   line-height: 1.75em
 }
 
-.timeline-element:hover{
+.timeline-element-collapses{
+  transition: box-shadow .25s ease-in;
+  cursor: pointer;
+  user-select: none;
+}
+
+.timeline-element-collapses:after {
+  content: '\25BC'; /* Unicode character for "plus" sign (+) */
+  font-size: 18px;
+  color: lightgrey;
+  float: right;
+  margin-left: 5px;
+}
+
+.timeline-element-active:after{
+  content: '\25B2';
+}
+
+.timeline-element-transitioning, .timeline-element-collapses:hover{
   box-shadow: 0 0 10px rgba(0, 0, 0, .6);
 }
 
+.timeline-collapsable{
+  overflow: hidden;
+  transition:height 0.3s ease-out;
+  height:auto;
+}
+
+
+
 .timeline-title{
   margin: 0;
-  font-size: calc(12px + 1vw);
+  font-size: 20px;
   font-weight: bold;
 }
 
 .timeline-date{
   margin: 0 0 0 10px;
-  font-size: calc(8px + 1vw);
+  font-size: 18px;
   font-style: italic;
 }
 
 .timeline-content{
   margin: 0;
-  font-size: calc(10px + 1vw);
+  font-size: 10;
 }
 
 
