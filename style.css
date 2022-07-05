@@ -22,11 +22,9 @@
   color: rgb(130, 232, 137);
 }
 
-/* Styling for home section */
+/* Styling for Home section */
 #home{
-  height: 1000px;
-  min-height: 500px;
-  max-height: 95vh;
+  height: 95vh;
 
   /* Parallax Scrolling Background */
   background-image: url("Blammus.png");
@@ -63,7 +61,7 @@
 
 
 #about{
-  /* Styling for about section
+  /* Styling for About section
   height: 500px;
   max-height: 60vh;
   min-height: 450px;
@@ -84,7 +82,7 @@
   width: 300px;
 }
 
-/* Styling for work section */
+/* Styling for Work section */
 #work{
   background-color: rgb(102, 102, 102);
 }
@@ -152,7 +150,7 @@
 }
 
 .timeline-element-collapses:after {
-  content: '\25BC'; /* Unicode character for "plus" sign (+) */
+  content: '\25BC'; /* Unicode character for down pointer */
   font-size: 18px;
   color: lightgrey;
   float: right;
@@ -160,7 +158,7 @@
 }
 
 .timeline-element-active:after{
-  content: '\25B2';
+  content: '\25B2'; /* Unicode character for up pointer */
 }
 
 .timeline-element-transitioning, .timeline-element-collapses:hover{
@@ -172,8 +170,6 @@
   transition:height 0.3s ease-out;
   height:auto;
 }
-
-
 
 .timeline-title{
   margin: 0;
@@ -192,8 +188,93 @@
   font-size: 10;
 }
 
+/* Styling for Projects section */
+#projects{
+  background-color: rgb(72, 72, 72);
+}
 
-/* Styling for contact section */
+.project-link{
+  position: relative;
+  margin: auto;
+  height: 10vw;
+  width: 10vw;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.project-image{
+  height: 10vw;
+  width: 10vw;
+  border-radius: 10px;
+}
+
+.project-title{
+  color: rgba(0,0,0,0);
+  background: rgba(0, 0, 0, 0);
+  transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.project-title-active{
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.project-modal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Backup color */
+  background-color: rgba(0,0,0,0.4);
+}
+
+.project-modal-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  padding: 20px;
+  max-width: 50%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-modal-close{
+  color: rgba(0,0,0,0.6);
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color .25s ease-in;
+}
+
+.project-modal-close:hover{
+  color: rgba(0,0,0,1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-modal-image{
+  display: block;
+  margin: auto;
+  height: 300px;
+  max-width: 100%;
+}
+
+/* Styling for Contact section */
 #contact{
   height: 600px;
   min-height: 400px;
@@ -215,6 +296,7 @@
   font-size: calc(8px + .75vw);
   color: lightgrey;
 }
+
 
 #footer{
   height: 100px;

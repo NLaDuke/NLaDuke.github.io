@@ -1,6 +1,9 @@
 
 // Element Getters
 const timeline_col = document.getElementsByClassName("timeline-element-collapses");
+const project_links = document.getElementsByClassName("project-link");
+const project_modals = document.getElementsByClassName("project-modal");
+const project_modal_close_buttons = document.getElementsByClassName("project-modal-close");
 
 //Smooth Timeline Transition Animation Functions:
 function collapseSection(element){
@@ -43,6 +46,7 @@ function expandSection(element){
 // Collapsable Timeline elements
 Array.from(timeline_col).forEach(elem => {
   //Collapse on page load
+  elem.classList.toggle("timeline-element-transitioning");
   collapseSection(elem.querySelector(".timeline-collapsable"));
   // Add Click Event
   elem.addEventListener("click", function(){
@@ -57,5 +61,39 @@ Array.from(timeline_col).forEach(elem => {
     else{
       expandSection(content);
     }
+  });
+});
+
+
+// Project Listeners
+Array.from(project_links).forEach(elem =>{
+  // Display Modem on click
+  elem.addEventListener("click", function(){
+    let modal = document.getElementById(elem.getAttribute("targetModal"));
+    modal.style.display = "block";
+  });
+  // Display title on hover
+  elem.addEventListener("mouseenter", function(){
+    elem.lastElementChild.classList.toggle("project-title-active")
+  });
+  elem.addEventListener("mouseleave", function(){
+    elem.lastElementChild.classList.toggle("project-title-active")
+  });
+});
+
+// Project Modal Listeners
+
+// Close on clicking outside of modal
+Array.from(project_modals).forEach(elem =>{
+  window.onclick = function(event) {
+  if (event.target == elem) {
+    elem.style.display = "none";
+  }
+}
+});
+
+Array.from(project_modal_close_buttons).forEach(elem=>{
+  elem.addEventListener("click", function(){
+    elem.parentElement.parentElement.style.display="none";
   });
 });
