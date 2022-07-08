@@ -70,7 +70,15 @@ Array.from(project_links).forEach(elem =>{
   // Display Modem on click
   elem.addEventListener("click", function(){
     let modal = document.getElementById(elem.getAttribute("targetModal"));
-    modal.style.display = "block";
+    //Safegaurd to prevent multiple animations at once
+    if(modal.getAttribute("animating") != "true"){
+      modal.setAttribute("animating", "true");
+      modal.addEventListener("animationend", function(){
+        modal.removeEventListener("animationend", arguments.callee);
+        modal.setAttribute("animating", "false");
+      });
+      modal.style.display = "block";
+    }
   });
   // Display title on hover
   elem.addEventListener("mouseenter", function(){
@@ -86,14 +94,37 @@ Array.from(project_links).forEach(elem =>{
 // Close on clicking outside of modal
 Array.from(project_modals).forEach(elem =>{
   window.onclick = function(event) {
-  if (event.target == elem) {
-    elem.style.display = "none";
+  if (event.target == elem && elem.getAttribute("animating") != "true") {
+    //Safegaurd to prevent multiple animations at once
+    elem.setAttribute("animating", "true");
+    elem.classList.toggle("project-modal-closing");
+    elem.firstElementChild.classList.toggle("project-modal-content-closing");
+    elem.addEventListener("animationend", function(){
+      elem.removeEventListener("animationend", arguments.callee);
+      elem.style.display="none";
+      elem.classList.toggle("project-modal-closing");
+      elem.firstElementChild.classList.toggle("project-modal-content-closing");
+      elem.setAttribute("animating", "false");
+    });
   }
 }
 });
 
 Array.from(project_modal_close_buttons).forEach(elem=>{
   elem.addEventListener("click", function(){
-    elem.parentElement.parentElement.style.display="none";
+    let modal = elem.parentElement.parentElement;
+    if (modal.getAttribute("animating") != "true") {
+      //Safegaurd to prevent multiple animations at once
+      modal.setAttribute("animating", "true");
+      modal.classList.toggle("project-modal-closing");
+      modal.firstElementChild.classList.toggle("project-modal-content-closing");
+      modal.addEventListener("animationend", function(){
+        modal.removeEventListener("animationend", arguments.callee);
+        modal.style.display="none";
+        modal.classList.toggle("project-modal-closing");
+        modal.firstElementChild.classList.toggle("project-modal-content-closing");
+        modal.setAttribute("animating", "false");
+      });
+    }
   });
 });
