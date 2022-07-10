@@ -72,6 +72,9 @@ Array.from(project_links).forEach(elem =>{
     let modal = document.getElementById(elem.getAttribute("targetModal"));
     //Safegaurd to prevent multiple animations at once
     if(modal.getAttribute("animating") != "true"){
+      const body = document.querySelector("body");
+      // lock Scroll
+      body.style.overflow = "hidden";
       modal.setAttribute("animating", "true");
       modal.addEventListener("animationend", function(){
         modal.removeEventListener("animationend", arguments.callee);
@@ -97,6 +100,10 @@ Array.from(project_modals).forEach(elem =>{
   if (event.target == elem && elem.getAttribute("animating") != "true") {
     //Safegaurd to prevent multiple animations at once
     elem.setAttribute("animating", "true");
+    // Restore Scroll
+    const body = document.querySelector("body");
+    body.style.overflow = "auto";
+    // Close modal
     elem.classList.toggle("project-modal-closing");
     elem.firstElementChild.classList.toggle("project-modal-content-closing");
     elem.addEventListener("animationend", function(){
@@ -116,6 +123,10 @@ Array.from(project_modal_close_buttons).forEach(elem=>{
     if (modal.getAttribute("animating") != "true") {
       //Safegaurd to prevent multiple animations at once
       modal.setAttribute("animating", "true");
+      // Restore Scroll
+      const body = document.querySelector("body");
+      body.style.overflow = "auto";
+      // Close modal
       modal.classList.toggle("project-modal-closing");
       modal.firstElementChild.classList.toggle("project-modal-content-closing");
       modal.addEventListener("animationend", function(){
