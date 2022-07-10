@@ -112,7 +112,7 @@ Array.from(project_modals).forEach(elem =>{
 
 Array.from(project_modal_close_buttons).forEach(elem=>{
   elem.addEventListener("click", function(){
-    let modal = elem.parentElement.parentElement;
+    let modal = elem.parentElement.parentElement.parentElement;
     if (modal.getAttribute("animating") != "true") {
       //Safegaurd to prevent multiple animations at once
       modal.setAttribute("animating", "true");
