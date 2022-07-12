@@ -74,7 +74,7 @@ Array.from(project_links).forEach(elem =>{
     if(modal.getAttribute("animating") != "true"){
       const body = document.querySelector("body");
       // lock Scroll
-      body.style.overflow = "hidden";
+      body.classList.toggle("modal-open");
       modal.setAttribute("animating", "true");
       modal.addEventListener("animationend", function(){
         modal.removeEventListener("animationend", arguments.callee);
@@ -102,7 +102,7 @@ Array.from(project_modals).forEach(elem =>{
     elem.setAttribute("animating", "true");
     // Restore Scroll
     const body = document.querySelector("body");
-    body.style.overflow = "auto";
+    body.classList.toggle("modal-open");
     // Close modal
     elem.classList.toggle("project-modal-closing");
     elem.firstElementChild.classList.toggle("project-modal-content-closing");
@@ -125,7 +125,7 @@ Array.from(project_modal_close_buttons).forEach(elem=>{
       modal.setAttribute("animating", "true");
       // Restore Scroll
       const body = document.querySelector("body");
-      body.style.overflow = "auto";
+      body.classList.toggle("modal-open");
       // Close modal
       modal.classList.toggle("project-modal-closing");
       modal.firstElementChild.classList.toggle("project-modal-content-closing");

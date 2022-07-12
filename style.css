@@ -1,7 +1,3 @@
-.section{
-
-}
-
 .section-head-text{
   font-size: calc(24px + 1.5vw);
   color: rgb(130, 232, 137);
@@ -10,16 +6,6 @@
 .section-sub-head{
   font-size: calc(12px + 1vw);
   color: lightgrey;
-}
-
-.body-text{
-  font-size: calc(10px + .5vw);
-  color: white;
-}
-
-.subheader{
-  font-size: calc(12px + 1vw);
-  color: rgb(130, 232, 137);
 }
 
 /* Styling for Home section */
@@ -68,23 +54,108 @@
   */
 }
 
+.about-grid{
+  margin: auto;
+  padding: 10px;
+  justify-content: center;
+  width: 800px;
+  display: grid;
+  grid-template-areas:
+    'portrait divider profile profile profile'
+    'info divider profile profile profile'
+    'info divider skills skills skills'
+    'info divider skills skills skills';
+}
+
+.about-grid-content{
+  margin: auto;
+  padding: 10px;
+}
 
 #portrait{
+  grid-area: portrait;
   max-width:150px;
   width:100%;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid darkgrey;
+}
+
+#profile{
+  grid-area: profile;
+  top: 10px;
+}
+
+.personal-info-title{
+  color: rgb(130, 232, 137);
+  font-size: 1.2em;
+}
+
+.personal-info-text{
+  color: white;
+  font-size: 1em;
+}
+
+#personal-info{
+  grid-area: info;
+  text-align: center;
+  top: 0;
+  height: 20em;
+}
+
+#skill-info{
+  grid-area: skills;
+
+}
+
+.about-grid-divider{
+  width: 2px;
+  margin: 0px 1em;
+  grid-area: divider;
+  background-color: lightgrey;
+}
+
+.about-grid-header{
+  color: rgb(130, 232, 137);
+  font-size: 1.5em;
+  border-bottom: 1px solid lightgrey;
+}
+
+.about-grid-text{
+  color: white;
+  font-size: 1em;
 }
 
 .skill-label{
   color:white;
 }
 
-#resume-button{
-  width: 300px;
+.about-progress{
+  background-color: lightgrey;
 }
 
+#resume-button{
+  width: auto;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 1025px){
+  .about-grid{
+    width: 100%;
+    grid-template-areas:
+      'portrait divider profile profile profile'
+      'info divider profile profile profile'
+      'info divider skills skills skills'
+      'filler divider skills skills skills';
+  }
+
+  #personal-info{
+    height: auto;
+  }
+}
 /* Styling for Work section */
 #work{
-  background-color: rgb(102, 102, 102);
+  background-color: rgb(72, 72, 72);
 }
 
   /*Timeline Styling*/
@@ -272,6 +343,11 @@
   to {opacity: 0}
 }
 
+body.modal-open{
+  overflow-y: hidden;
+  padding-right: 18px;
+}
+
 .project-modal{
   display: none;
   position: fixed;
@@ -297,7 +373,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% - 9px), -50%); /*9x for half of scroll-bar padding*/
   width: 400px;
   max-width: 65%;
   padding: 20px;
@@ -317,6 +393,7 @@
 }
 
 .project-modal-content-closing{
+  transform: translate(-50%, -50%);
   animation-name: modal-out;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
@@ -406,7 +483,7 @@
   }
 
   .project-modal-container{
-    transform: translate(-50%, -10em - 15px);
+    transform: translate(calc(-50% + 9px), -10em - 15px);
     padding-right: 0;
     height: 400px;
     max-height: 80%;

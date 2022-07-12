@@ -74,89 +74,50 @@
     </div>
   </div>
 
+
+
   <!-- About Section -->
   <div id="about" class="bg-dark p-5">
     <div class="container text-center">
       <h4 class="section-head-text">About Me</h4>
       <h4 class="section-sub-head p-2">Subtitle of Some Kind</h4>
     </div>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="col">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="row align-items-center">
-              <div class="col-3">
-                <img id="portrait" src="CroppedPortrait.png" class="img-fluid rounded-circle float-end border border-3 border-secondary" alt="Old Image I should Probably Replace">
-              </div>
-              <div class="col-7">
-                <p class="body-text text-light">In this section will be a lot of text describing me and what I do and how awesome I am. In this section will be a lot of text describing me and what I do and how awesome I am. In this section will be a lot of text describing me and what I do and how awesome I am. In this section will be a lot of text describing me and what I do and how awesome I am.</p>
-              </div>
-            </div>
-          </div>
+    <div class="about-grid">
+      <div class="about-grid-content">
+        <img id="portrait" src="CroppedPortrait.png" alt="Old Image I should Probably Replace">
+      </div>
+      <div class="about-grid-divider"></div>
+      <div id="profile" class="about-grid-content about-grid-text">
+        <h class="about-grid-header"></h>
+        <p class="about-grid-text">In this section will be a lot of text describing me and what I do and how awesome I am. In this section will be a lot of text describing me and what I do and how awesome I am. In this section will be a lot of text describing me and what I do and how awesome I am. In this section will be a lot of text describing me and what I do and how awesome I am.</p>
+      </div>
+      <div id="personal-info" class="about-grid-content about-grid-text">
+        <h class="personal-info-title">Full Name:</h>
+        <p class="personal-info-text">Nolan LaDuke</p>
+        <h class="personal-info-title">Date of Birth:</h>
+        <p class="personal-info-text">October 2001</p>
+        <h class="personal-info-title">Current Residence:</h>
+        <p class="personal-info-text">Cincinnati area</p>
+        <a id="resume-button" class="btn btn-success" href="https://drive.google.com/file/d/1D8EyXsnCXqqKVqtFarsNss4QphVPVECx/view?usp=sharing" target="_blank">View My Resume</a>
+      </div>
+      <div id="skill-info" class="about-grid-content ">
+        <h class="about-grid-header">Skills:</h>
+        <p class="about-grid-text">Talk about my leadership and computer science experience here. Talk about my leadership and computer science experience here. Talk about my leadership and computer science experience here.</p>
+        <h class="skill-label">C++</h>
+        <div class="progress about-progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Experienced</div>
         </div>
-        <div class="row p-3 justify-content-center">
-          <div class="col-lg-10">
-            <div class="row">
-              <div class="col-2"></div>
-              <div class="col">
-                <div class="row">
-                  <div style="width:50%;" class="border-bottom my-1">
-                    <h class="subheader">Idkwtf:</h>
-                  </div>
-                </div>
-                <div class="row">
-                  <h style="color:white;">Some Kind of info idk yet</h>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="row">
-                  <div style="width:50%;" class="border-bottom my-1">
-                    <h class="subheader">Skills:</h>
-                  </div>
-                </div>
-                <div class="row">
-                  <p class="body-text">Talk about my leadership and computer science experience here. Talk about my leadership and computer science experience here. Talk about my leadership and computer science experience here.</p>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <h class="skill-label">C++</h>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Experienced</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <h class="skill-label">Python</h>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Confident</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <h class="skill-label">Bootstrap and CSS</h>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Learning</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <h class="skill-label">Javascript</h>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">Learning</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-2">
-              </div>
-            </div>
-          </div>
+        <h class="skill-label">Python</h>
+        <div class="progress about-progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">Confident</div>
         </div>
-        <div class="row justify-content-center p-5">
-          <a id="resume-button" class="btn btn-success" href="https://drive.google.com/file/d/1D8EyXsnCXqqKVqtFarsNss4QphVPVECx/view?usp=sharing" target="_blank">View My Resume</a>
+        <h class="skill-label">HTML + CSS</h>
+        <div class="progress about-progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Learning</div>
+        </div>
+        <h class="skill-label">JavaScript</h>
+        <div class="progress about-progress">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Learning</div>
         </div>
       </div>
     </div>
@@ -252,7 +213,7 @@
     </div>
   </div>
 
-  <!-- Project Section Modals -->
+  <!-- Project Modals -->
   <div class="project-modal" id="project1" animating="false">
     <div class="project-modal-container">
       <div class="project-modal-content">
@@ -318,7 +279,7 @@
 </div>
 
 <div id="footer" class="bg-black d-flex justify-content-center align-items-center">
-  <h4>Created By: Nolan LaDuke • Last Edited: July 7th 2022</h4>
+  <h4>Created By: Nolan LaDuke • Last Edited: July 11th 2022</h4>
 </div>
 
 </body>
