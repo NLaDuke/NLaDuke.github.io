@@ -134,9 +134,14 @@
   background-color: lightgrey;
 }
 
+.about-progress-bar{
+  background-color: rgb(60, 162, 67);
+}
+
 #resume-button{
   width: auto;
   margin-top: 10%;
+  background-color: rgb(60, 162, 67);
 }
 
 @media only screen and (max-width: 1025px){
@@ -152,6 +157,7 @@
   #personal-info{
     height: auto;
   }
+
 }
 /* Styling for Work section */
 #work{
