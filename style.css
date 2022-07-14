@@ -1,10 +1,10 @@
 .section-head-text{
-  font-size: calc(24px + 1.5vw);
+  font-size: calc(36px + .75vw);
   color: rgb(130, 232, 137);
 }
 
 .section-sub-head{
-  font-size: calc(12px + 1vw);
+  font-size: calc(18px + .5vw);
   color: lightgrey;
 }
 
@@ -27,17 +27,18 @@
 }
 
 #myName{
-  font-size: calc(20px + 3vw);
+  font-size: calc(50px + 1.25vw);
+  margin: 10px 0;
 }
 
 #quickDesc{
-  font-size: calc(10px + 1.5vw);
+  font-size: calc(25px + .75vw);
 }
 
 .head-icon{
-  height: calc(18px + 2.5vw);
-  width: calc(18px + 2.5vw);
-  fill: initial;
+  height: calc(50px + .5vw);
+  width: calc(50px + .5vw);
+  fill: black;
   transition: fill 0.5s ease-out;
 }
 
@@ -142,9 +143,14 @@
   width: auto;
   margin-top: 10%;
   background-color: rgb(60, 162, 67);
+  transition: background-color 0.5s;
 }
 
-@media only screen and (max-width: 1025px){
+#resume-button:hover{
+  background-color: rgb(30, 132, 37);
+}
+
+@media only screen and (max-width: 820px){
   .about-grid{
     width: 100%;
     grid-template-areas:
@@ -267,7 +273,46 @@
 
 /* Styling for Education section */
 #education{
+}
 
+.education-section{
+  margin:auto;
+  text-align: center;
+}
+
+#college{
+
+}
+
+#highschool{
+
+}
+
+.education-divider{
+  margin: 10px auto;
+  width: calc(25% + 10px);
+  height: 2px;
+  background-color: darkgrey;
+}
+
+.education-sub-header{
+  margin: auto;
+  text-align: center;
+  font-size: calc(16px + .75vw);
+  color: rgb(130, 232, 137);
+}
+
+.education-years{
+  color: lightgrey;
+  font-style: italic;
+  font-size: calc(12px + .25vw);
+}
+
+.education-details{
+  margin: auto;
+  width: 40%;
+  color: white;
+  font-size: 18px;
 }
 
 /* Styling for Projects section */
@@ -502,9 +547,7 @@ body.modal-open{
 
 /* Styling for Contact section */
 #contact{
-  height: 600px;
-  min-height: 400px;
-  max-height: 50vh;
+  height: 400px;
 }
 
 .contact-icon{
@@ -514,18 +557,22 @@ body.modal-open{
 }
 
 .contact-info{
-  font-size: calc(12px + 1vw);
+  font-size: calc(16px + .75vw);
   color: white;
 }
 
 .contact-details{
-  font-size: calc(8px + .75vw);
+  font-size: calc(12px + .5vw);
   color: lightgrey;
 }
 
+#linkedin_link{
+  transition: color .5s;
+}
 
 #footer{
   height: 100px;
+  text-align: center;
 }
 
 a{
