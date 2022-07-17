@@ -11,9 +11,8 @@
 /* Styling for Home section */
 #home{
   height: 95vh;
-
   /* Parallax Scrolling Background */
-  background-image: url("Blammus.png");
+  background-image: url("forest-background.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +20,7 @@
 }
 
 .head-text{
-  color: white;
+  color: rgb(241, 242, 235);
   text-shadow: 1px 1px 5px black;
   white-space: nowrap;
 }
@@ -38,21 +37,22 @@
 .head-icon{
   height: calc(50px + .5vw);
   width: calc(50px + .5vw);
-  fill: black;
+  fill: rgb(241, 242, 235);
+  border-radius: 50%;
+
+  -webkit-filter: drop-shadow( 3px 3px 2px black);
+  filter: drop-shadow( 3px 3px 2px black);
   transition: fill 0.5s ease-out;
 }
 
 .head-icon:hover{
-  fill: #DA4567;
+  fill: rgb(141, 142, 135);
 }
 
 
+
 #about{
-  /* Styling for About section
-  height: 500px;
-  max-height: 60vh;
-  min-height: 450px;
-  */
+
 }
 
 .about-grid{
@@ -291,7 +291,7 @@
 .education-divider{
   margin: 10px auto;
   width: calc(25% + 10px);
-  height: 2px;
+  height: 1px;
   background-color: darkgrey;
 }
 
@@ -305,14 +305,14 @@
 .education-years{
   color: lightgrey;
   font-style: italic;
-  font-size: calc(12px + .25vw);
+  font-size: calc(14px + .25vw);
 }
 
 .education-details{
-  margin: auto;
-  width: 40%;
+  margin: 0px auto 20px auto;
+  width: calc(30% + 100px);
   color: white;
-  font-size: 18px;
+  font-size: calc(17px + .1vw);
 }
 
 /* Styling for Projects section */
