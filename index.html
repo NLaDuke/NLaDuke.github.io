@@ -89,7 +89,7 @@
       <div class="about-grid-divider"></div>
       <div id="profile" class="about-grid-content about-grid-text">
         <h class="about-grid-header"></h>
-        <p class="about-grid-text">Hello! My name is Nolan LaDuke and I am a fledgling software developer with experience in C++ and Python. (In my free time?) I enjoy solving puzzles and analyzing things. I am currently looking for introductory positions in both front and back-end work and would love to get in touch with you!</p>
+        <p class="about-grid-text">Hello! My name is Nolan LaDuke and I am a fledgling software developer with experience in C++ and Python. When I'm not coding, I enjoy solving puzzles and analyzing things. I am currently looking for introductory positions in both front and back-end work and would love to get in touch with you!</p>
       </div>
       <div id="personal-info" class="about-grid-content about-grid-text">
         <h class="personal-info-title">Full Name:</h>
@@ -102,8 +102,8 @@
       </div>
       <div id="skill-info" class="about-grid-content ">
         <h class="about-grid-header">Skills:</h>
-        <p class="about-grid-text">I have experience working in and managing projects with teams as small as 2 people and as large as 15. In both team and individual settings I have experience working to understand a customer's needs and working with them develop a unique solution for their problem. I have small amounts of experience in many different languages, but am most comfortable in C++.</p>
-        <h class="skill-label">C++</h> <!--  Most of my work has been in C++, but I have experience using Python and Javascript for web development. I am currently studying HTML and CSS. -->
+        <p class="about-grid-text">I have worked in and managed projects with teams as small as 2 people and as large as 15. In both team and individual settings I have experience determining a customer's needs and working with them develop a unique solution for their problem. I have familiarity with many different languages, but am most comfortable in C++.</p>
+        <h class="skill-label">C++</h>
         <div class="progress about-progress">
           <div class="progress-bar about-progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Experienced</div>
         </div>
@@ -213,31 +213,82 @@
       <h4 class="section-sub-head">Things I Have Worked On</h4>
     </div>
     <div class="project-link-grid">
-      <div class="project-link" targetModal="project1">
-        <img src="squirrel.jpg" class="project-image">
-        <p class="project-title">Funny Meme</p>
+      <div class="project-link" targetModal="Resume-Website">
+        <img src="project_photos/resume-website-sm.png" class="project-image">
+        <p class="project-title">Resume Website</p>
       </div>
-      <div class="project-link">
+      <div class="project-link" targetModal="Telingo">
+        <img src="project_photos/telingo-sm.png" class="project-image">
+        <p class="project-title">Telingo</p>
       </div>
-      <div class="project-link">
+      <div class="project-link" targetModal="Schedule">
+        <img src="project_photos/task-book-sm.png" class="project-image">
+        <p class="project-title">Taskbook Software</p>
       </div>
-      <div class="project-link">
+      <div class="project-link" targetModal="Current-Project">
+        <img src="" class="project-image">
+        <p class="project-title">Current Project</p>
       </div>
     </div>
   </div>
 
   <!-- Project Modals -->
-  <div class="project-modal" id="project1" animating="false">
+  <div class="project-modal" id="Resume-Website" animating="false">
     <div class="project-modal-container">
       <div class="project-modal-content">
         <span class="project-modal-close">&times;</span>
-        <img src="squirrel.jpg" class="project-modal-image">
-        <p class="project-modal-title">Funny Meme</p>
+        <img src="project_photos/resume-website.png" class="project-modal-image">
+        <p class="project-modal-title">Resume Website</p>
+        <p class="project-modal-date">June 2022 - July 2022</p>
+        <div class="divider-line"></div>
+        <p class="project-modal-info">Designed and built a resume website from scratch using self-taught HTML, CSS, and JavaScript with additional functionality added using Bootstrap 5. The website is currently hosted through Github Pages.</p>
+        <a class="project-modal-button project-modal-button-left" target="_blank" href="">Project Link</a>
+        <a class="project-modal-button project-modal-button-right" target="_blank" href="https://github.com/NLaDuke/MyWebsite">Github Repository</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-modal" id="Telingo" animating="false">
+    <div class="project-modal-container">
+      <div class="project-modal-content">
+        <span class="project-modal-close">&times;</span>
+        <img src="project_photos/telingo.png" class="project-modal-image">
+        <p class="project-modal-title">Telingo</p>
+        <p class="project-modal-date">February 2022 - May 2022</p>
+        <div class="divider-line"></div>
+        <p class="project-modal-info">Worked in a team of 4 to develop a website that allows users to practice their second language skills with other learners through video call. Was in charge of the WebRTC peer to peer connection functionality built using JavaScript, SocketIO, and Python. Also designed and implemented the dictionary lookup feature using the Lexicala API.</p>
+        <a class="project-modal-button project-modal-button-left" target="_blank" href="https://www.telingo.xyz/">Project Link</a>
+        <a class="project-modal-button project-modal-button-right" target="_blank" href="https://github.com/BrendanWightman/Capstone_Project">Github Repository</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-modal" id="Schedule" animating="false">
+    <div class="project-modal-container">
+      <div class="project-modal-content">
+        <span class="project-modal-close">&times;</span>
+        <img src="project_photos/task-book.png" class="project-modal-image">
+        <p class="project-modal-title">Taskbook Software</p>
         <p class="project-modal-date">July 2022</p>
         <div class="divider-line"></div>
-        <p class="project-modal-info">In July 2022 I worked with a small team to develop a very funny meme. The meme was really funny and everyone liked it.</p>
-        <a class="project-modal-button project-modal-button-left" target="_blank" href="">Project Link</a>
-        <a class="project-modal-button project-modal-button-right" target="_blank" href="">Github Repository</a>
+        <p class="project-modal-info">Worked in a team of over 10 people to develop a taskbook website using SCRUM practices. Was in charge of facilitating and managing communication between team members as well as leading group meetings. Helped develop the "general tasks" section of the website.</p>
+        <a class="project-modal-button project-modal-button-disabled project-modal-button-left" target="_blank" href="">Project Not Available</a>
+        <a class="project-modal-button project-modal-button-right" target="_blank" href="https://github.com/JarrettWoo/SWE-group-project">Github Repository</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-modal" id="Current-Project" animating="false">
+    <div class="project-modal-container">
+      <div class="project-modal-content">
+        <span class="project-modal-close">&times;</span>
+        <img src="" class="project-modal-image">
+        <p class="project-modal-title">Current Project</p>
+        <p class="project-modal-date">N/A</p>
+        <div class="divider-line"></div>
+        <p class="project-modal-info">A section currently under construction as I work to decide what my next project is.</p>
+        <a class="project-modal-button project-modal-button-disabled project-modal-button-left" target="_blank" href="">Project Link</a>
+        <a class="project-modal-button project-modal-button-disabled project-modal-button-right" target="_blank" href="">Github Repository</a>
       </div>
     </div>
   </div>
@@ -292,7 +343,7 @@
 </div>
 
 <div id="footer" class="bg-black d-flex justify-content-center align-items-center">
-  <h4>Created By: Nolan LaDuke • Last Edited: July 13th 2022</h4>
+  <h4>Created By: Nolan LaDuke • Last Edited: July 17th 2022</h4>
 </div>
 
 </body>

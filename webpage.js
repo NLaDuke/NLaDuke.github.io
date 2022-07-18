@@ -96,25 +96,25 @@ Array.from(project_links).forEach(elem =>{
 
 // Close on clicking outside of modal
 Array.from(project_modals).forEach(elem =>{
-  window.onclick = function(event) {
-  if (event.target == elem && elem.getAttribute("animating") != "true") {
-    //Safegaurd to prevent multiple animations at once
-    elem.setAttribute("animating", "true");
-    // Restore Scroll
-    const body = document.querySelector("body");
-    body.classList.toggle("modal-open");
-    // Close modal
-    elem.classList.toggle("project-modal-closing");
-    elem.firstElementChild.classList.toggle("project-modal-content-closing");
-    elem.addEventListener("animationend", function(){
-      elem.removeEventListener("animationend", arguments.callee);
-      elem.style.display="none";
+  elem.addEventListener("click", function(event){
+    if (elem.getAttribute("animating") != "true" && event.target == event.currentTarget) {
+      //Safegaurd to prevent multiple animations at once
+      elem.setAttribute("animating", "true");
+      // Restore Scroll
+      const body = document.querySelector("body");
+      body.classList.toggle("modal-open");
+      // Close modal
       elem.classList.toggle("project-modal-closing");
       elem.firstElementChild.classList.toggle("project-modal-content-closing");
-      elem.setAttribute("animating", "false");
-    });
-  }
-}
+      elem.addEventListener("animationend", function(){
+        elem.removeEventListener("animationend", arguments.callee);
+        elem.style.display="none";
+        elem.classList.toggle("project-modal-closing");
+        elem.firstElementChild.classList.toggle("project-modal-content-closing");
+        elem.setAttribute("animating", "false");
+      });
+    }
+  });
 });
 
 Array.from(project_modal_close_buttons).forEach(elem=>{

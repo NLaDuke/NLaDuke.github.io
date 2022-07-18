@@ -124,7 +124,7 @@
 
 .about-grid-text{
   color: white;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .skill-label{
@@ -155,7 +155,7 @@
     width: 100%;
     grid-template-areas:
       'portrait divider profile profile profile'
-      'info divider profile profile profile'
+      'info divider skills skills skills'
       'info divider skills skills skills'
       'filler divider skills skills skills';
   }
@@ -344,6 +344,7 @@
   width: calc(8vw + 100px);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid grey;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;
@@ -351,6 +352,7 @@
 
 .project-image{
   height: 100%;
+  opacity: 0.9; /* Helps prevent blinding white colors */
   border-radius: 10px;
 }
 
@@ -425,7 +427,7 @@ body.modal-open{
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% - 9px), -50%); /*9x for half of scroll-bar padding*/
-  width: 400px;
+  width: 700px;
   max-width: 65%;
   padding: 20px;
   border-radius: 10px;
@@ -509,6 +511,13 @@ body.modal-open{
 }
 
 .project-modal-button:hover{
+  background-color: lightgrey;
+  text-decoration: none;
+  color: black;
+}
+
+.project-modal-button-disabled{
+  pointer-events: none;
   background-color: lightgrey;
   text-decoration: none;
   color: black;
