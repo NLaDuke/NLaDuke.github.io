@@ -34,6 +34,10 @@
   font-size: calc(25px + .75vw);
 }
 
+#mail-button{
+  cursor: pointer;
+}
+
 .head-icon{
   height: calc(50px + .5vw);
   width: calc(50px + .5vw);

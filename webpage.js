@@ -5,6 +5,11 @@ const project_links = document.getElementsByClassName("project-link");
 const project_modals = document.getElementsByClassName("project-modal");
 const project_modal_close_buttons = document.getElementsByClassName("project-modal-close");
 
+// Send-Mail button:
+document.getElementById("mail-button").addEventListener("click", function(){
+  window.open('mailto:NALaDuke09@gmail.com');
+});
+
 //Smooth Timeline Transition Animation Functions:
 function collapseSection(element){
   var sectionHeight = element.scrollHeight;
