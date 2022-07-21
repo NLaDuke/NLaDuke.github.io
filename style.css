@@ -569,7 +569,7 @@ body.modal-open-mobile{
 /* Styling For Modals on Mobiile*/
 @media only screen and (max-width: 720px){
   .project-modal-image{
-    height: 250px;
+    height: 200px;
   }
 
   .project-modal-close{
@@ -586,7 +586,7 @@ body.modal-open-mobile{
     transform: translate(-50%, calc(-10em - 15px));
     height: 400px;
     padding-right: 0;
-    width: 500px;
+    width: 90%;
     max-width: 90%;
   }
 }
