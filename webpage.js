@@ -77,10 +77,13 @@ Array.from(project_links).forEach(elem =>{
     let modal = document.getElementById(elem.getAttribute("targetModal"));
     //Safegaurd to prevent multiple animations at once
     if(modal.getAttribute("animating") != "true"){
+      // lock Scroll
+      const body = document.querySelector("body");
       if (!("ontouchstart" in document.documentElement)){
-        const body = document.querySelector("body");
-        // lock Scroll
         body.classList.toggle("modal-open");
+      }
+      else{
+        body.classList.toggle("modal-open-mobile");
       }
 
 
@@ -109,10 +112,13 @@ Array.from(project_modals).forEach(elem =>{
     if (elem.getAttribute("animating") != "true" && event.target == event.currentTarget) {
       //Safegaurd to prevent multiple animations at once
       elem.setAttribute("animating", "true");
+      // Restore Scroll
+      const body = document.querySelector("body");
       if (!("ontouchstart" in document.documentElement)){
-        // Restore Scroll
-        const body = document.querySelector("body");
         body.classList.toggle("modal-open");
+      }
+      else{
+        body.classList.toggle("modal-open-mobile");
       }
       // Close modal
       elem.classList.toggle("project-modal-closing");
@@ -134,10 +140,13 @@ Array.from(project_modal_close_buttons).forEach(elem=>{
     if (modal.getAttribute("animating") != "true") {
       //Safegaurd to prevent multiple animations at once
       modal.setAttribute("animating", "true");
+      // Restore Scroll
+      const body = document.querySelector("body");
       if (!("ontouchstart" in document.documentElement)){
-        // Restore Scroll
-        const body = document.querySelector("body");
         body.classList.toggle("modal-open");
+      }
+      else{
+        body.classList.toggle("modal-open-mobile");
       }
       // Close modal
       modal.classList.toggle("project-modal-closing");
