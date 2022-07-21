@@ -77,9 +77,13 @@ Array.from(project_links).forEach(elem =>{
     let modal = document.getElementById(elem.getAttribute("targetModal"));
     //Safegaurd to prevent multiple animations at once
     if(modal.getAttribute("animating") != "true"){
-      const body = document.querySelector("body");
-      // lock Scroll
-      body.classList.toggle("modal-open");
+      if (!("ontouchstart" in document.documentElement)){
+        const body = document.querySelector("body");
+        // lock Scroll
+        body.classList.toggle("modal-open");
+      }
+
+
       modal.setAttribute("animating", "true");
       modal.addEventListener("animationend", function(){
         modal.removeEventListener("animationend", arguments.callee);
@@ -105,9 +109,11 @@ Array.from(project_modals).forEach(elem =>{
     if (elem.getAttribute("animating") != "true" && event.target == event.currentTarget) {
       //Safegaurd to prevent multiple animations at once
       elem.setAttribute("animating", "true");
-      // Restore Scroll
-      const body = document.querySelector("body");
-      body.classList.toggle("modal-open");
+      if (!("ontouchstart" in document.documentElement)){
+        // Restore Scroll
+        const body = document.querySelector("body");
+        body.classList.toggle("modal-open");
+      }
       // Close modal
       elem.classList.toggle("project-modal-closing");
       elem.firstElementChild.classList.toggle("project-modal-content-closing");
@@ -128,9 +134,11 @@ Array.from(project_modal_close_buttons).forEach(elem=>{
     if (modal.getAttribute("animating") != "true") {
       //Safegaurd to prevent multiple animations at once
       modal.setAttribute("animating", "true");
-      // Restore Scroll
-      const body = document.querySelector("body");
-      body.classList.toggle("modal-open");
+      if (!("ontouchstart" in document.documentElement)){
+        // Restore Scroll
+        const body = document.querySelector("body");
+        body.classList.toggle("modal-open");
+      }
       // Close modal
       modal.classList.toggle("project-modal-closing");
       modal.firstElementChild.classList.toggle("project-modal-content-closing");
