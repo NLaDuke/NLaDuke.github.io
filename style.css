@@ -480,13 +480,6 @@ body.modal-open-mobile{
   cursor: pointer;
 }
 
-.image-scroll-container{
-  height: 100%;
-  width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
 .project-modal-image{
   display: block;
   margin: auto;
