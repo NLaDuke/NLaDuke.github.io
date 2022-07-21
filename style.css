@@ -568,18 +568,26 @@ body.modal-open-mobile{
 
 /* Styling For Modals on Mobiile*/
 @media only screen and (max-width: 720px){
+  .project-modal-image{
+    height: 250px;
+  }
+
   .project-modal-close{
     right: 32px;
     left: default;
   }
 
   .project-modal-content{
+    max-height: 100%;
     padding-right: 20px;
   }
 
   .project-modal-container{
     transform: translate(-50%, calc(-10em - 15px));
-    width: 1000px;
+    height: 400px;
+    padding-right: 0;
+    width: 500px;
+    max-width: 90%;
   }
 }
 
