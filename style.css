@@ -434,7 +434,7 @@ body.modal-open{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(calc(-50% - 9px), -50%); /*9x for half of scroll-bar padding*/
+  transform: translate(calc(-50% - 9px), -50%); /*9px for half of scroll-bar padding*/
   width: 700px;
   max-width: 65%;
   padding: 20px;
@@ -559,6 +559,12 @@ body.modal-open{
 
   .project-modal-content{
     max-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 360px){
+  .project-modal-container{
+    transform: translate(-50%, -10em - 15px);
   }
 }
 
