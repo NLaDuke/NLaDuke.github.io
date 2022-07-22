@@ -76,16 +76,16 @@ body{
     'info divider skills skills skills';
 }
 
-.about-grid-content{
-  margin: auto;
-  padding: 10px;
+.about-grid-filler{
+  grid-area: filler;
 }
 
 #portrait{
+  display: block;
   grid-area: portrait;
   max-width:150px;
   width:100%;
-  margin: auto;
+  margin: auto auto 25px auto;
   border-radius: 50%;
   border: 3px solid darkgrey;
 }
@@ -110,6 +110,8 @@ body{
   text-align: center;
   top: 0;
   height: 20em;
+  display: grid;
+  grid-template-rows: auto;
 }
 
 #skill-info{
@@ -158,21 +160,46 @@ body{
   background-color: rgb(30, 132, 37);
 }
 
-@media only screen and (max-width: 820px){
+@media only screen and (max-width: 720px){
   .about-grid{
     width: 100%;
+    text-align: center;
+    grid-template-columns: auto auto auto auto auto;
     grid-template-areas:
-      'portrait divider profile profile profile'
-      'info divider skills skills skills'
-      'info divider skills skills skills'
-      'filler divider skills skills skills';
+      'portrait'
+      'info'
+      'divider'
+      'profile'
+      'skills';
+  }
+
+  #portrait{
+    display: block;
+    max-width: none;
+    width: 50%;
   }
 
   #personal-info{
     height: auto;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  #resume-button{
+    margin-top: auto;
+    grid-columns-start: 1;
+    grid-column-end: 3;
+    margin-bottom: 10%
+  }
+
+  .about-grid-divider{
+    width: auto;
+    height: 1px;
+    margin: 1em 0px;
   }
 
 }
+
+
 /* Styling for Work section */
 #work{
   background-color: rgb(72, 72, 72);
@@ -670,7 +697,6 @@ body.modal-open-mobile{
   font-size: 30px;
   background-color: rgb(72, 72, 72);
   border-radius: 10px;
-  /*border: 5px solid black;*/
 
   transition: background-color 1s;
 }
