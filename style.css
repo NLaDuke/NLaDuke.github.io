@@ -600,23 +600,50 @@ body.modal-open-mobile{
 
 /* Styling for Contact section */
 #contact{
-  
+  min-height: 400px;
+}
+
+.contact-items{
+  margin: 25px auto auto auto;
+  justify-content: center;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+@media only screen and (max-width: 720px){
+  .contact-items{
+    width: 100%;
+    grid-template-columns: auto;
+  }
+}
+
+.contact-element{
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .contact-icon{
-  height: calc(45px + 1vw);
-  width: calc(45px + 1vw);
+  margin: auto;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
   fill: rgb(130, 232, 137); /*Change Color?*/
+  border-bottom: 1px solid white;
 }
 
 .contact-info{
-  font-size: calc(14px + .75vw);
+  font-size: calc(16px + .5vw);
   color: white;
 }
 
 .contact-details{
-  font-size: calc(10px + .5vw);
+  font-size: calc(14px + .25vw);
   color: lightgrey;
+
 }
 
 #linkedin_link{
