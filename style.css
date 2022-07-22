@@ -203,10 +203,18 @@ body{
 /* Styling for Work section */
 #work{
   background-color: rgb(72, 72, 72);
+  padding: 50px;
+}
+
+@media only screen and (max-width: 720px){
+  #work{
+    padding: 50px 10px;
+  }
 }
 
   /*Timeline Styling*/
 .timeline{
+  width: 100%;
   margin: 0 auto;
   max-width: 750px;
   padding: 25px;
