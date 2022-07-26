@@ -154,6 +154,7 @@ body{
   margin-top: 10%;
   background-color: rgb(60, 162, 67);
   transition: background-color 0.5s;
+  height: 5vh;
 }
 
 #resume-button:hover{
@@ -188,6 +189,7 @@ body{
     margin-top: auto;
     grid-columns-start: 1;
     grid-column-end: 3;
+    height: auto;
     margin-bottom: 10%
   }
 
