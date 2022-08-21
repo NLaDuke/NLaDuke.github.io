@@ -305,6 +305,26 @@ body{
   font-weight: bold;
 }
 
+.letter-link{
+  appearance: button;
+  float: right;
+  width: 25%;
+  border-radius: 10px;
+  height: auto;
+  text-decoration: none;
+  overflow: hidden;
+  color: black;
+  text-align: center;
+  background-color: grey;
+  transition: background-color 0.5s;
+}
+
+.letter-link:hover{
+  background-color: lightgrey;
+  text-decoration: none;
+  color: black;
+}
+
 .timeline-date{
   margin: 0 0 0 0px;
   font-size: 18px;
